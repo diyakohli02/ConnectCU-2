@@ -4,6 +4,12 @@ import { useAuth } from './context/AuthContext';
 const Header = () => {
     const { user, logout } = useAuth();
 
+    const getInitials = (name) => {
+        if (!name) return '';
+        const parts = name.split(' ');
+        return parts.map(part => part[0]).join('').toUpperCase();
+    };
+
     return (
         <header>
             <div className="container">
@@ -21,7 +27,10 @@ const Header = () => {
                     <div className="auth-buttons">
                         {user ? (
                             <>
-                                <span className="user-welcome">Hi, {user.name}</span>
+                                <div className="user-welcome">
+                                    <div className="user-avatar-badge">{getInitials(user.name)}</div>
+                                    <span>Hi, {user.name}</span>
+                                </div>
                                 <button onClick={logout} className="btn btn-outline">Log Out</button>
                             </>
                         ) : (
