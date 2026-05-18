@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         console.log('Successfully connected to MongoDB!');
-        
+
         // Only start listening once the database is connected
         app.listen(PORT, () => {
             console.log(`Server is running on http://localhost:${PORT}`);

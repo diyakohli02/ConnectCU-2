@@ -112,8 +112,8 @@ const Connect = () => {
                             <label className="form-label">Areas of Interest</label>
                             <div className="interests-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: '1rem', marginTop: '1rem' }}>
                                 {[
-                                    'Programming', 'Design', 'Business', 'Marketing', 'AI/ML', 
-                                    'Research', 'Sports', 'Music', 'Art', 'Leadership', 
+                                    'Programming', 'Design', 'Business', 'Marketing', 'AI/ML',
+                                    'Research', 'Sports', 'Music', 'Art', 'Leadership',
                                     'Entrepreneurship', 'Writing'
                                 ].map(interest => (
                                     <div
